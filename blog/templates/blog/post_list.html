@@ -1,0 +1,28 @@
+<html>
+<body>
+{% extends "blog/base.html" %}
+
+{% block content %}
+    {% for post in posts %}
+        <div class="post">
+            <h1><a href="">{{ post.title }}</a></h1>
+            <div>
+                Release date:
+                {{ post.release_date }}
+            </div>
+            <p>
+            <div> Primmary actor: 
+            {{  post.actors }}
+            </div>
+            <p>
+            <div style="CLEAR: left; FLOAT: right">
+            <img src="{{ post.image }}" width height="40%"></img>
+            </div>
+            <div> Summary:
+                {{ post.summary }}
+            </div>
+        </div>
+    {% endfor %}
+{% endblock content %}
+</body>
+</html>
